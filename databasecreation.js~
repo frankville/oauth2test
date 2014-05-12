@@ -1,0 +1,20 @@
+var mysql = require("mysql");
+
+var oauth2db = mysql.createConnection({
+    host: "localhost",
+    user: "1",
+    password:"1",
+    database:"oauth2db"
+});
+
+
+oauth2db.connect();
+
+
+oauth2db.query("",function(err,rows,fiels){
+    if(err){
+	console.log("error! "+err);
+    }else{
+	console.log("exito al crear tabla oauth_access_tokens");
+    };
+});

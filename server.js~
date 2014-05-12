@@ -1,0 +1,14 @@
+var express = require("express"), 
+oauth2server = require("node-oauth2-server");
+
+var app = express();
+
+app.configure(function(){
+    app.oauth: oauth2server({
+	model:{},
+	grants: ["password"],
+	debug:true
+    });
+    app.use(express.bodyParser());
+});
+
